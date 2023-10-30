@@ -48,7 +48,7 @@ public class HelloController {
     @FXML
     private void restartGame(ActionEvent event) {
         buttons.forEach(this::resetButton);
-        winnerText.setText("");
+        winnerText.setText("TicTacToe");
         //code for restarting game
     }
 
@@ -58,15 +58,32 @@ public class HelloController {
         //code for resetting button, checking that button cant be pressed again
     }
 
-    public void checkWin() {
-        //code for checking if someone has won
+    public void checkWinOrDraw() {
+        for (int i = 0; i < 8; i++) {
+            String line = switch (i){
+                case 0 -> button0.getText() + button1.getText() + button2.getText();
+                case 1 -> button3.getText() + button4.getText() + button5.getText();
+                case 2 -> button6.getText() + button7.getText() + button8.getText();
+                case 3 -> button0.getText() + button3.getText() + button6.getText();
+                case 4 -> button1.getText() + button4.getText() + button7.getText();
+                case 5 -> button2.getText() + button5.getText() + button8.getText();
+                case 6 -> button0.getText() + button4.getText() + button8.getText();
+                case 7 -> button2.getText() + button4.getText() + button6.getText();
+                default -> null;
+            };
+            if (line.equals("XXX")) {
+                winnerText.setText("X wins!");
+            } else if (line.equals("OOO")) {
+                winnerText.setText("O wins!");
+            }
+        }
     }
 
     public void disableButtonAfterClick(Button button) {
         button.setOnMouseClicked(mouseEvent -> {
             setPlayerSymbol(button);
             button.setDisable(true);
-            checkWin();
+            checkWinOrDraw();
             computerTurn();
         });
     }
@@ -85,7 +102,7 @@ public class HelloController {
                 Button randomButton = availableButtons.get(random.nextInt(availableButtons.size()));
                 setComputerSymbol(randomButton);
                 randomButton.setDisable(true);
-                checkWin();
+                checkWinOrDraw();
             }
         }
     }
