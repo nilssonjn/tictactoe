@@ -3,20 +3,22 @@ package com.example.tictactoe;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class HelloController {
     private Model model = new Model();
+    Random random = new Random();
 
     public void initialize() {
         buttons = new ArrayList<>(Arrays.asList(button0, button1, button2, button3, button4, button5, button6, button7, button8));
         for (Button button : buttons) {
-            buttonsCantBePressed(button);
+            disableButtonAfterClick(button);
             button.setFocusTraversable(false);
         }
-
     }
 
     @FXML
@@ -37,16 +39,22 @@ public class HelloController {
     private Button button7;
     @FXML
     private Button button8;
+    @FXML
+    private Text winnerText;
 
     private int playerTurn = 0;
     ArrayList<Button> buttons = new ArrayList<>();
 
     @FXML
     private void restartGame(ActionEvent event) {
+        buttons.forEach(this::resetButton);
+        winnerText.setText("");
         //code for restarting game
     }
 
     public void resetButton(Button button) {
+        button.setDisable(false);
+        button.setText("");
         //code for resetting button, checking that button cant be pressed again
     }
 
@@ -54,11 +62,12 @@ public class HelloController {
         //code for checking if someone has won
     }
 
-    public void buttonsCantBePressed(Button button) {
+    public void disableButtonAfterClick(Button button) {
         button.setOnMouseClicked(mouseEvent -> {
             setPlayerSymbol(button);
             button.setDisable(true);
             checkWin();
+            computerTurn();
         });
     }
 
@@ -67,7 +76,16 @@ public class HelloController {
     }
 
     public void computerTurn() {
-        //code for computer turn
+        if (!model.isBoardFull() && !model.checkWin()) {
+            for (Button button : buttons) {
+                if (button.getText().isEmpty()) {
+                    setComputerSymbol(button);
+                    button.setDisable(true);
+                    checkWin();
+                    break;
+                }
+            }
+        }
     }
 
     public void setPlayerSymbol(Button button) {
@@ -78,5 +96,14 @@ public class HelloController {
             button.setText("O");
             playerTurn = 0;
         }
+    }
+    public void setComputerSymbol(Button button) {
+        if (playerTurn % 2 == 0) {
+            button.setText("X");
+            playerTurn = 1;
+        } else {
+            button.setText("O");
+        }
+        playerTurn = (playerTurn + 1) % 2;
     }
 }
