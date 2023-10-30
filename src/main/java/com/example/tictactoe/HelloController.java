@@ -34,4 +34,22 @@ public class HelloController {
     private void restartGame(ActionEvent event){
         //code for restarting game
     }
+    public void resetButton(Button button){
+        //code for resetting button, checking that button cant be pressed again
+    }
+    public void checkWin(){
+        //code for checking if someone has won
+    }
+    public void buttonsCantBePressed(){
+        //code for making buttons unpressable
+    }
+    public void playerTurn(){
+        //code for player turn
+    }
+    public void computerTurn(){
+        //code for computer turn
+    }
+    public void setPlayerSymbol(){
+        //code for setting player symbol
+    }
 }
