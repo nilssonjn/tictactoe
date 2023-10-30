@@ -77,13 +77,15 @@ public class HelloController {
 
     public void computerTurn() {
         if (!model.isBoardFull() && !model.checkWin()) {
+            ArrayList<Button> availableButtons = new ArrayList<>();
             for (Button button : buttons) {
-                if (button.getText().isEmpty()) {
-                    setComputerSymbol(button);
-                    button.setDisable(true);
-                    checkWin();
-                    break;
-                }
+                if (!button.isDisabled()) availableButtons.add(button);
+            }
+            if (!availableButtons.isEmpty()) {
+                Button randomButton = availableButtons.get(random.nextInt(availableButtons.size()));
+                setComputerSymbol(randomButton);
+                randomButton.setDisable(true);
+                checkWin();
             }
         }
     }
@@ -97,6 +99,7 @@ public class HelloController {
             playerTurn = 0;
         }
     }
+
     public void setComputerSymbol(Button button) {
         if (playerTurn % 2 == 0) {
             button.setText("X");
