@@ -17,12 +17,12 @@ public class Model {
     public void setMessage(String message) {
         this.message.set(message);
     }
-    public boolean isBoardFull() {
-        //code for checking if board is full
-        return false;
-    }
-
-    public boolean checkWin() {
-        return false;
-    }
+//    public boolean isBoardFull() {
+//        //code for checking if board is full
+//        return false;
+//    }
+//
+//    public boolean checkWin() {
+//        return false;
+//    }
 }

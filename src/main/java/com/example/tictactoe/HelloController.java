@@ -41,6 +41,8 @@ public class HelloController {
     private Button button8;
     @FXML
     private Text winnerText;
+    @FXML
+    private Button exitGame;
 
     private int playerTurn = 0;
     ArrayList<Button> buttons = new ArrayList<>();

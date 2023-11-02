@@ -25,5 +25,6 @@
             <Font size="18.0" />
          </font>
       </Text>
+      <Button fx:id="exitGame" layoutX="158.0" layoutY="463.0" mnemonicParsing="false" text="Exit Game" />
    </children>
 </AnchorPane>
