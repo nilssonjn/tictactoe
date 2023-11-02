@@ -28,4 +28,10 @@ public class Model {
     public void setButtons(ObservableList<Button> gameButtons) {
         this.buttons = gameButtons;
     }
+
+    public void resetGameData() {
+        for (Button button : this.buttons) {
+            button.setText("");
+        }
+    }
 }

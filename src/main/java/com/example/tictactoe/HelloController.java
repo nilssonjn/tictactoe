@@ -18,9 +18,9 @@ public class HelloController {
     @FXML
     public Button exitButton;
     @FXML
-    private Text playerText;
+    public Text showWinner;
     @FXML
-    private Button restartGame;
+    public Button restartGame;
 
     @FXML
     private Button button0;
@@ -66,18 +66,29 @@ public class HelloController {
         }
         clickedButton.setDisable(true);
     }
-    public void ExitGameWhenClicked(){
+
+    public void ExitGameWhenClicked() {
         Platform.exit();
+    }
+
+    public void resetGame() {
+        model.resetGameData();
+        showWinner.setText("Tic-Tac-Toe");
+        enableButtons();
+    }
+
+    public void ResetGameWhenClicked() {
+        resetGame();
+    }
+
+    public void enableButtons() {
+        for (Button button : model.getButtons()) {
+            button.setDisable(false);
+        }
     }
 }
 
 
-
-//    public void enableButtons() {
-//        for (Button button : buttons) {
-//            button.setDisable(false);
-//        }
-//    }
 //        buttons = new ArrayList<>(Arrays.asList(button0, button1, button2, button3, button4, button5, button6, button7, button8));
 //        for (Button button : buttons) {
 //            disableButtonAfterClick(button);
