@@ -1,28 +1,31 @@
 package com.example.tictactoe;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
 public class Model {
-    private StringProperty message = new SimpleStringProperty();
 
-    public String getMessage() {
-        return message.get();
+    private Text playerText = new Text();
+    private ObservableList<Button> buttons = FXCollections.observableArrayList();
+
+
+    public Text getPlayerText() {
+        return playerText;
     }
 
-    public StringProperty messageProperty() {
-        return message;
+    public void setPlayerText(Text playerText) {
+        this.playerText = playerText;
     }
 
-    public void setMessage(String message) {
-        this.message.set(message);
+
+    public ObservableList<Button> getButtons() {
+        return buttons;
     }
-//    public boolean isBoardFull() {
-//        //code for checking if board is full
-//        return false;
-//    }
-//
-//    public boolean checkWin() {
-//        return false;
-//    }
+
+    public void setButtons(ObservableList<Button> gameButtons) {
+        this.buttons = gameButtons;
+    }
 }
