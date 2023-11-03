@@ -19,13 +19,15 @@
             <Button fx:id="button8" layoutX="10.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="100.0" prefWidth="100.0" />
          </children>
       </FlowPane>
-      <Button fx:id="restartGame" layoutX="259.0" layoutY="456.0" onMouseClicked="#ResetGameWhenClicked" mnemonicParsing="false" prefHeight="38.0" prefWidth="72.0" text="Restart" />
+      <Button fx:id="restartGame" layoutX="259.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#ResetGameWhenClicked" prefHeight="38.0" prefWidth="72.0" text="Restart" />
       <Text fx:id="showWinner" layoutX="247.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe" textAlignment="CENTER" wrappingWidth="100.0">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="exitButton" layoutX="158.0" layoutY="463.0" onMouseClicked="#ExitGameWhenClicked" mnemonicParsing="false" text="Exit Game" />
+      <Button fx:id="exitButton" layoutX="158.0" layoutY="463.0" mnemonicParsing="false" onMouseClicked="#ExitGameWhenClicked" text="Exit Game" />
+      <Label fx:id="computerScore" layoutX="66.0" layoutY="69.0" text="Computer Score: " />
+      <Label fx:id="playerScore" layoutX="456.0" layoutY="69.0" text="Player 1 Score: " />
 
    </children>
 </AnchorPane>

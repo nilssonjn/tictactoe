@@ -5,15 +5,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-
 import java.util.List;
 
 public class HelloController {
 
     private Model model = new Model();
 
+    @FXML
+    public Label computerScore;
+    @FXML
+    public Label playerScore;
     @FXML
     public Button exitButton;
     @FXML
@@ -53,23 +57,10 @@ public class HelloController {
         }
     }
 
-
     public void handleButtonClick(MouseEvent event) {
         Button clickedButton = (Button) event.getSource();
-        setPlayerSymbol(clickedButton);
+        model.setPlayerSymbol(clickedButton);
         checkWin();
-
-    }
-
-    private void setPlayerSymbol(Button clickedButton) {
-        if (playerTurn % 2 == 0) {
-            clickedButton.setText("X");
-            playerTurn = 1;
-        } else {
-            clickedButton.setText("O");
-            playerTurn = 0;
-        }
-        clickedButton.setDisable(true);
     }
 
     public void ExitGameWhenClicked() {
@@ -107,8 +98,10 @@ public class HelloController {
             };
             if (line.equals("XXX")) {
                 showWinner.setText("X wins!");
+                break;
             } else if (line.equals("OOO")) {
                 showWinner.setText("O wins!");
+                break;
             }
         }
     }

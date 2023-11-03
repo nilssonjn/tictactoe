@@ -9,7 +9,9 @@ import javafx.scene.text.Text;
 public class Model {
 
 
-    //private int playerTurn = 0;
+    private int playerScore = 0;
+    private int computerScore = 0;
+    private int playerTurn = 0;
     private Text playerText = new Text();
     private ObservableList<Button> buttons = FXCollections.observableArrayList();
 
@@ -21,7 +23,6 @@ public class Model {
     public void setPlayerText(Text playerText) {
         this.playerText = playerText;
     }
-
 
     public ObservableList<Button> getButtons() {
         return buttons;
@@ -36,4 +37,31 @@ public class Model {
             button.setText("");
         }
     }
+
+    public int getPlayerScore() {
+        return playerScore;
+    }
+
+    public void setPlayerScore(int playerScore) {
+        this.playerScore = playerScore;
+    }
+
+    public int getComputerScore() {
+        return computerScore;
+    }
+
+    public void setComputerScore(int computerScore) {
+        this.computerScore = computerScore;
+    }
+    public void setPlayerSymbol(Button clickedButton) {
+        if (playerTurn % 2 == 0) {
+            clickedButton.setText("X");
+            playerTurn = 1;
+        } else {
+            clickedButton.setText("O");
+            playerTurn = 0;
+        }
+        clickedButton.setDisable(true);
+    }
+
 }
