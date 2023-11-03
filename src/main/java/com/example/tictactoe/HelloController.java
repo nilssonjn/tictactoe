@@ -48,12 +48,17 @@ public class HelloController {
     public void initialize() {
         ObservableList<Button> gameButtons = FXCollections.observableArrayList(button0, button1, button2, button3, button4, button5, button6, button7, button8);
         model.setButtons(gameButtons);
+
+        for (Button button : model.getButtons()) { //removes focus from buttons
+            button.setFocusTraversable(false);
+        }
     }
 
 
     public void handleButtonClick(MouseEvent event) {
         Button clickedButton = (Button) event.getSource();
         setPlayerSymbol(clickedButton);
+
     }
 
     private void setPlayerSymbol(Button clickedButton) {
@@ -94,18 +99,6 @@ public class HelloController {
 //            disableButtonAfterClick(button);
 //            button.setFocusTraversable(false);
 //        }
-//    }
-
-//    private void restartGame(ActionEvent event) {
-//        buttons.forEach(this::resetButton);
-//        winnerText.setText("TicTacToe");
-//        //code for restarting game
-//    }
-
-//    public void resetButton(Button button) {
-//        button.setDisable(false);
-//        button.setText("");
-//        //code for resetting button, checking that button cant be pressed again
 //    }
 
 //    public void checkWinOrDraw() {
