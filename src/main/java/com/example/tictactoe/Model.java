@@ -1,5 +1,7 @@
 package com.example.tictactoe;
 
+import javafx.beans.binding.BooleanExpression;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,20 +11,20 @@ import javafx.scene.text.Text;
 public class Model {
 
 
-    private int playerScore = 0;
-    private int computerScore = 0;
+    private SimpleIntegerProperty playerScore = new SimpleIntegerProperty();
+    private SimpleIntegerProperty computerScore = new SimpleIntegerProperty();
     private int playerTurn = 0;
-    private Text playerText = new Text();
+    //private Text playerText = new Text();
     private ObservableList<Button> buttons = FXCollections.observableArrayList();
 
 
-    public Text getPlayerText() {
-        return playerText;
-    }
-
-    public void setPlayerText(Text playerText) {
-        this.playerText = playerText;
-    }
+//    public Text getPlayerText() {
+//        return playerText;
+//    }
+//
+//    public void setPlayerText(Text playerText) {
+//        this.playerText = playerText;
+//    }
 
     public ObservableList<Button> getButtons() {
         return buttons;
@@ -35,24 +37,28 @@ public class Model {
     public void resetGameData() {
         for (Button button : this.buttons) {
             button.setText("");
+            button.setDisable(false);
         }
+        playerScore.set(0);
+        computerScore.set(0);
     }
 
-    public int getPlayerScore() {
-        return playerScore;
+    public Integer getPlayerScore() {
+        return playerScore.get();
     }
 
-    public void setPlayerScore(int playerScore) {
-        this.playerScore = playerScore;
+    public void setPlayerScore(Integer playerScore) {
+        this.playerScore.set(playerScore);
     }
 
-    public int getComputerScore() {
-        return computerScore;
+    public Integer getComputerScore() {
+        return computerScore.get();
     }
 
-    public void setComputerScore(int computerScore) {
-        this.computerScore = computerScore;
+    public void setComputerScore(Integer computerScore) {
+        this.computerScore.set(computerScore);
     }
+
     public void setPlayerSymbol(Button clickedButton) {
         if (playerTurn % 2 == 0) {
             clickedButton.setText("X");
@@ -64,4 +70,17 @@ public class Model {
         clickedButton.setDisable(true);
     }
 
+    public void updateScores() {
+       setPlayerScore(getPlayerScore() + 1);
+       setComputerScore(getComputerScore() + 1);
+    }
+
+    public SimpleIntegerProperty playerScoreProperty() {
+        return playerScore;
+    }
+
+    public SimpleIntegerProperty computerScoreProperty() {
+        return computerScore;
+    }
 }
+

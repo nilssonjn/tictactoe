@@ -49,12 +49,17 @@ public class HelloController {
     private List<Button> buttons;
 
     public void initialize() {
+        propertiesThatIsBound();
         ObservableList<Button> gameButtons = FXCollections.observableArrayList(button0, button1, button2, button3, button4, button5, button6, button7, button8);
         model.setButtons(gameButtons);
 
         for (Button button : model.getButtons()) { //removes focus from buttons
             button.setFocusTraversable(false);
         }
+    }
+    private void propertiesThatIsBound() {
+        playerScore.textProperty().bind(model.playerScoreProperty().asString());
+        computerScore.textProperty().bind(model.computerScoreProperty().asString());
     }
 
     public void handleButtonClick(MouseEvent event) {
@@ -97,9 +102,11 @@ public class HelloController {
                 default -> null;
             };
             if (line.equals("XXX")) {
+                model.updateScores();
                 showWinner.setText("X wins!");
                 break;
             } else if (line.equals("OOO")) {
+                model.updateScores();
                 showWinner.setText("O wins!");
                 break;
             }
