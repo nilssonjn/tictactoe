@@ -8,7 +8,6 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HelloController {
@@ -58,6 +57,7 @@ public class HelloController {
     public void handleButtonClick(MouseEvent event) {
         Button clickedButton = (Button) event.getSource();
         setPlayerSymbol(clickedButton);
+        checkWin();
 
     }
 
@@ -91,37 +91,28 @@ public class HelloController {
             button.setDisable(false);
         }
     }
+
+    public void checkWin() {
+        for (int i = 0; i < 8; i++) {
+            String line = switch (i) {
+                case 0 -> button0.getText() + button1.getText() + button2.getText();
+                case 1 -> button3.getText() + button4.getText() + button5.getText();
+                case 2 -> button6.getText() + button7.getText() + button8.getText();
+                case 3 -> button0.getText() + button3.getText() + button6.getText();
+                case 4 -> button1.getText() + button4.getText() + button7.getText();
+                case 5 -> button2.getText() + button5.getText() + button8.getText();
+                case 6 -> button0.getText() + button4.getText() + button8.getText();
+                case 7 -> button2.getText() + button4.getText() + button6.getText();
+                default -> null;
+            };
+            if (line.equals("XXX")) {
+                showWinner.setText("X wins!");
+            } else if (line.equals("OOO")) {
+                showWinner.setText("O wins!");
+            }
+        }
+    }
 }
-
-
-//        buttons = new ArrayList<>(Arrays.asList(button0, button1, button2, button3, button4, button5, button6, button7, button8));
-//        for (Button button : buttons) {
-//            disableButtonAfterClick(button);
-//            button.setFocusTraversable(false);
-//        }
-//    }
-
-//    public void checkWinOrDraw() {
-//        for (int i = 0; i < 8; i++) {
-//            String line = switch (i) {
-//                case 0 -> button0.getText() + button1.getText() + button2.getText();
-//                case 1 -> button3.getText() + button4.getText() + button5.getText();
-//                case 2 -> button6.getText() + button7.getText() + button8.getText();
-//                case 3 -> button0.getText() + button3.getText() + button6.getText();
-//                case 4 -> button1.getText() + button4.getText() + button7.getText();
-//                case 5 -> button2.getText() + button5.getText() + button8.getText();
-//                case 6 -> button0.getText() + button4.getText() + button8.getText();
-//                case 7 -> button2.getText() + button4.getText() + button6.getText();
-//                default -> null;
-//            };
-//            if (line.equals("XXX")) {
-//                winnerText.setText("X wins!");
-//            } else if (line.equals("OOO")) {
-//                winnerText.setText("O wins!");
-//            }
-//        }
-
-
 //    public void disableButtonAfterClick(Button button) {
 //        button.setOnMouseClicked(mouseEvent -> {
 //            setPlayerSymbol(button);

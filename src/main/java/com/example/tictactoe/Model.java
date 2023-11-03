@@ -8,6 +8,8 @@ import javafx.scene.text.Text;
 
 public class Model {
 
+
+    //private int playerTurn = 0;
     private Text playerText = new Text();
     private ObservableList<Button> buttons = FXCollections.observableArrayList();
 
