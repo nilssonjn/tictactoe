@@ -73,7 +73,7 @@ public class Model {
     public void checkWin(Button button0, Button button1, Button button2,
                          Button button3, Button button4, Button button5,
                          Button button6, Button button7, Button button8,
-                         Text showWinner, Model model) {
+                         Text showWinner) {
         for (int i = 0; i < 8; i++) {
             String line = switch (i) {
                 case 0 -> button0.getText() + button1.getText() + button2.getText();
@@ -87,14 +87,20 @@ public class Model {
                 default -> null;
             };
             if (line.equals("XXX")) {
-                model.updateScores();
                 showWinner.setText("X wins!");
-                break;
+                disableButtonsAfterWin();
+                return;
             } else if (line.equals("OOO")) {
-                model.updateScores();
                 showWinner.setText("O wins!");
-                break;
+                disableButtonsAfterWin();
+                return;
             }
+        }
+    }
+
+    public void disableButtonsAfterWin() {
+        for (Button button : this.buttons) {
+            button.setDisable(true);
         }
     }
 

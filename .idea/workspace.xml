@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49c75959-739e-4741-a3f9-ee1c66ddc842" name="Changes" comment="moved setPlayerSymbol to Model">
+    <list default="true" id="49c75959-739e-4741-a3f9-ee1c66ddc842" name="Changes" comment="moved checkWin to model, add randomComputerMove, changed setPlayerSymbol">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/Model.java" afterDir="false" />
@@ -247,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699003035802</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="moved checkWin to model, add randomComputerMove, changed setPlayerSymbol">
+      <option name="closed" value="true" />
+      <created>1699207217594</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1699207217594</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +287,8 @@
     <MESSAGE value="removed focus and highlighting buttons" />
     <MESSAGE value="readded checkWin, might change it again... works for now" />
     <MESSAGE value="moved setPlayerSymbol to Model" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved setPlayerSymbol to Model" />
+    <MESSAGE value="moved checkWin to model, add randomComputerMove, changed setPlayerSymbol" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved checkWin to model, add randomComputerMove, changed setPlayerSymbol" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

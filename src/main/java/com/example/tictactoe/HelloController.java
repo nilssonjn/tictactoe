@@ -65,8 +65,9 @@ public class HelloController {
     public void handleButtonClick(MouseEvent event) {
         Button clickedButton = (Button) event.getSource();
         model.setPlayerSymbol(clickedButton);
-        model.checkWin(button0, button1, button2, button3, button4, button5, button6, button7, button8, showWinner, model);
+        model.checkWin(button0, button1, button2, button3, button4, button5, button6, button7, button8, showWinner);
         model.randomComputerMove();
+        model.checkWin(button0, button1, button2, button3, button4, button5, button6, button7, button8, showWinner);
     }
 
     public void ExitGameWhenClicked() {
@@ -89,48 +90,3 @@ public class HelloController {
         }
     }
 }
-//    public void disableButtonAfterClick(Button button) {
-//        button.setOnMouseClicked(mouseEvent -> {
-//            setPlayerSymbol(button);
-//            button.setDisable(true);
-//            checkWinOrDraw();
-//            computerTurn();
-//        });
-//    }
-
-//        public void playerTurn () {
-//            //code for player turn
-//        }
-//
-//        public void computerTurn () {
-//            if (!model.isBoardFull() && !model.checkWin()) {
-//                ArrayList<Button> availableButtons = new ArrayList<>();
-//                for (Button button : buttons) {
-//                    if (!button.isDisabled()) availableButtons.add(button);
-//                }
-//                if (!availableButtons.isEmpty()) {
-//                    Button randomButton = availableButtons.get(random.nextInt(availableButtons.size()));
-//                    setComputerSymbol(randomButton);
-//                    randomButton.setDisable(true);
-//                    checkWinOrDraw();
-//                }
-//            }
-//        }
-//
-//        if (playerTurn % 2 == 0) {
-//            button.setText("X");
-//            playerTurn = 1;
-//        } else {
-//            button.setText("O");
-//            playerTurn = 0;
-//        }
-//    }
-
-//        public void setComputerSymbol (Button button){
-//            if (playerTurn % 2 == 0) {
-//                button.setText("X");
-//                playerTurn = 1;
-//            } else {
-//                button.setText("O");
-//            }
-//            playerTurn = (playerTurn + 1) % 2;
