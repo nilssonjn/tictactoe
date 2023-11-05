@@ -65,7 +65,8 @@ public class HelloController {
     public void handleButtonClick(MouseEvent event) {
         Button clickedButton = (Button) event.getSource();
         model.setPlayerSymbol(clickedButton);
-        checkWin();
+        model.checkWin(button0, button1, button2, button3, button4, button5, button6, button7, button8, showWinner, model);
+        model.randomComputerMove();
     }
 
     public void ExitGameWhenClicked() {
@@ -85,31 +86,6 @@ public class HelloController {
     public void enableButtons() {
         for (Button button : model.getButtons()) {
             button.setDisable(false);
-        }
-    }
-
-    public void checkWin() {
-        for (int i = 0; i < 8; i++) {
-            String line = switch (i) {
-                case 0 -> button0.getText() + button1.getText() + button2.getText();
-                case 1 -> button3.getText() + button4.getText() + button5.getText();
-                case 2 -> button6.getText() + button7.getText() + button8.getText();
-                case 3 -> button0.getText() + button3.getText() + button6.getText();
-                case 4 -> button1.getText() + button4.getText() + button7.getText();
-                case 5 -> button2.getText() + button5.getText() + button8.getText();
-                case 6 -> button0.getText() + button4.getText() + button8.getText();
-                case 7 -> button2.getText() + button4.getText() + button6.getText();
-                default -> null;
-            };
-            if (line.equals("XXX")) {
-                model.updateScores();
-                showWinner.setText("X wins!");
-                break;
-            } else if (line.equals("OOO")) {
-                model.updateScores();
-                showWinner.setText("O wins!");
-                break;
-            }
         }
     }
 }
