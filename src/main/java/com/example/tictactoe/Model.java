@@ -74,6 +74,8 @@ public class Model {
                          Button button3, Button button4, Button button5,
                          Button button6, Button button7, Button button8,
                          Text showWinner) {
+        boolean xWins = false;
+        boolean oWins = false;
         for (int i = 0; i < 8; i++) {
             String line = switch (i) {
                 case 0 -> button0.getText() + button1.getText() + button2.getText();
@@ -86,16 +88,34 @@ public class Model {
                 case 7 -> button2.getText() + button4.getText() + button6.getText();
                 default -> null;
             };
-            if (line.equals("XXX")) {
-                showWinner.setText("X wins!");
-                disableButtonsAfterWin();
-                return;
-            } else if (line.equals("OOO")) {
-                showWinner.setText("O wins!");
-                disableButtonsAfterWin();
-                return;
+            switch (line) {
+                case "XXX" -> xWins = true;
+                case "OOO" -> oWins = true;
             }
         }
+        showWinOrDraw(showWinner, xWins, oWins);
+    }
+
+    private void showWinOrDraw(Text showWinner, boolean xWins, boolean oWins) {
+        if (xWins && oWins) {
+            showWinner.setText("Draw!");
+            disableButtonsAfterWin();
+        } else if (xWins) {
+            showWinner.setText("X wins!");
+            disableButtonsAfterWin();
+        } else if (oWins) {
+            showWinner.setText("O wins!");
+            disableButtonsAfterWin();
+        } else if (allButtonsClicked()) {
+            showWinner.setText("Draw!");
+        }
+    }
+
+    private boolean allButtonsClicked() {
+        for (Button button : this.buttons) {
+            if (button.getText().isEmpty()) return false;
+        }
+        return true;
     }
 
     public void disableButtonsAfterWin() {
@@ -109,7 +129,7 @@ public class Model {
         List<Button> emptyButtons = buttons.stream()
                 .filter(button -> button.getText().isEmpty())
                 .toList();
-        if (!emptyButtons.isEmpty()){
+        if (!emptyButtons.isEmpty()) {
             int randomIndex = random.nextInt(emptyButtons.size());
             emptyButtons.get(randomIndex).setText("O");
             emptyButtons.get(randomIndex).setDisable(true);

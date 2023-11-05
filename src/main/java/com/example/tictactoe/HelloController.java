@@ -77,16 +77,9 @@ public class HelloController {
     public void resetGame() {
         model.resetGameData();
         showWinner.setText("Tic-Tac-Toe");
-        enableButtons();
     }
 
     public void ResetGameWhenClicked() {
         resetGame();
-    }
-
-    public void enableButtons() {
-        for (Button button : model.getButtons()) {
-            button.setDisable(false);
-        }
     }
 }
