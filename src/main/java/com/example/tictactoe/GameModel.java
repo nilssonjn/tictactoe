@@ -102,7 +102,7 @@ public class GameModel {
         showWinOrDraw(showWinner, xWins, oWins);
     }
 
-    private void showWinOrDraw(Text showWinner, boolean xWins, boolean oWins) {
+    public void showWinOrDraw(Text showWinner, boolean xWins, boolean oWins) {
 
         if (xWins) {
             showWinner.setText("X wins!");
