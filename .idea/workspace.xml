@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tictactoe/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tictactoe/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

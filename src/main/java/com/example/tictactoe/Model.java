@@ -8,7 +8,6 @@ import javafx.scene.text.Text;
 
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 public class Model {
 
@@ -57,8 +56,11 @@ public class Model {
         clickedButton.setDisable(true);
     }
 
-    public void updateScores() {
+    public void updatePlayerScore() {
         setPlayerScore(getPlayerScore() + 1);
+    }
+
+    public void updateComputerScore() {
         setComputerScore(getComputerScore() + 1);
     }
 
@@ -102,9 +104,11 @@ public class Model {
             disableButtonsAfterWin();
         } else if (xWins) {
             showWinner.setText("X wins!");
+            updatePlayerScore();
             disableButtonsAfterWin();
         } else if (oWins) {
             showWinner.setText("O wins!");
+            updateComputerScore();
             disableButtonsAfterWin();
         } else if (allButtonsClicked()) {
             showWinner.setText("Draw!");
