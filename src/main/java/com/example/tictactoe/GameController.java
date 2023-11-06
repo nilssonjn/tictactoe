@@ -14,15 +14,11 @@ public class GameController {
     private final GameModel model = new GameModel();
 
     @FXML
-    public Label computerScore;
+    private Label computerScore;
     @FXML
-    public Label playerScore;
+    private Label playerScore;
     @FXML
-    public Button exitButton;
-    @FXML
-    public Text showWinner;
-    @FXML
-    public Button restartGame;
+    private Text showWinner;
 
     @FXML
     private Button button0;
@@ -52,6 +48,7 @@ public class GameController {
             button.setFocusTraversable(false);
         }
     }
+
     private void bindProperties() {
         playerScore.textProperty().bind(model.playerScoreProperty().asString());
         computerScore.textProperty().bind(model.computerScoreProperty().asString());
@@ -66,7 +63,7 @@ public class GameController {
         model.checkWin(button0, button1, button2, button3, button4, button5, button6, button7, button8, showWinner);
     }
 
-    public void ExitGameWhenClicked() {
+    public void exitGameWhenClicked() {
         Platform.exit();
     }
 
@@ -75,7 +72,12 @@ public class GameController {
         showWinner.setText("Tic-Tac-Toe");
     }
 
-    public void ResetGameWhenClicked() {
+    public void resetGameWhenClicked() {
         resetGame();
+    }
+
+    public void playAgainButton() {
+        model.playAgainKeepingScores();
+        showWinner.setText("Tic-Tac-Toe");
     }
 }

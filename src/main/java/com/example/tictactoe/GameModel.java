@@ -32,6 +32,13 @@ public class GameModel {
         computerScore.set(0);
     }
 
+    public void playAgainKeepingScores() {
+        for (Button button : this.buttons) {
+            button.setText("");
+            button.setDisable(false);
+        }
+    }
+
     public Integer getPlayerScore() {
         return playerScore.get();
     }
@@ -96,10 +103,8 @@ public class GameModel {
     }
 
     private void showWinOrDraw(Text showWinner, boolean xWins, boolean oWins) {
-        if (xWins && oWins) {
-            showWinner.setText("Draw!");
-            disableButtonsAfterWin();
-        } else if (xWins) {
+
+        if (xWins) {
             showWinner.setText("X wins!");
             updatePlayerScore();
             disableButtonsAfterWin();

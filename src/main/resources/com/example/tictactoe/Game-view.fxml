@@ -19,31 +19,32 @@
             <Button fx:id="button8" layoutX="10.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="100.0" prefWidth="100.0" />
          </children>
       </FlowPane>
-      <Button fx:id="restartGame" layoutX="259.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#ResetGameWhenClicked" prefHeight="38.0" prefWidth="72.0" text="Restart" />
+      <Button layoutX="191.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#resetGameWhenClicked" prefHeight="38.0" prefWidth="75.0" text="Restart" />
       <Text fx:id="showWinner" layoutX="227.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe" textAlignment="CENTER" wrappingWidth="134.0">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Button fx:id="exitButton" layoutX="258.0" layoutY="520.0" mnemonicParsing="false" onMouseClicked="#ExitGameWhenClicked" text="Exit Game" />
-      <Label fx:id="computerScore" layoutX="140.0" layoutY="78.0" text="0">
+      <Button layoutX="257.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#exitGameWhenClicked" prefHeight="38.0" prefWidth="75.0" text="Exit Game" />
+      <Label fx:id="computerScore" layoutX="144.0" layoutY="78.0" text="0">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Label fx:id="playerScore" layoutX="441.0" layoutY="81.0" text="0">
+      <Label fx:id="playerScore" layoutX="425.0" layoutY="78.0" text="0">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Label layoutX="108.0" layoutY="41.0" prefHeight="23.0" prefWidth="72.0" text="Player 1:">
+      <Label layoutX="108.0" layoutY="41.0" prefHeight="23.0" prefWidth="82.0" text="Computer">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="405.0" layoutY="41.0" text="Computer:">
+      <Label layoutX="405.0" layoutY="41.0" text="Player:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
+      <Button layoutX="324.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#playAgainButton" prefHeight="38.0" prefWidth="75.0" text="Play Again" />
 
    </children>
 </AnchorPane>
