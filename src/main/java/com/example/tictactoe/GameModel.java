@@ -105,11 +105,11 @@ public class GameModel {
     public void showWinOrDraw(Text showWinner, boolean xWins, boolean oWins) {
 
         if (xWins) {
-            showWinner.setText("X wins!");
+            showWinner.setText("Player wins!");
             updatePlayerScore();
             disableButtonsAfterWin();
         } else if (oWins) {
-            showWinner.setText("O wins!");
+            showWinner.setText("Computer wins!");
             updateComputerScore();
             disableButtonsAfterWin();
         } else if (allButtonsClicked()) {
