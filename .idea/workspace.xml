@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49c75959-739e-4741-a3f9-ee1c66ddc842" name="Changes" comment="refactor names">
+    <list default="true" id="49c75959-739e-4741-a3f9-ee1c66ddc842" name="Changes" comment="add playAgain button that keeps scores and reset round">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/tictactoe/GameModelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tictactoe/Game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tictactoe/Game-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/tictactoe/ModelTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,7 +56,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "editing.templates",
@@ -67,10 +68,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.tictactoe" />
       <recent name="com.example.tictactoeTest" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameApplication">
+  <component name="RunManager" selected="JUnit.GameModelTest">
     <configuration name="GameApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.tictactoe.GameApplication" />
       <module name="tictactoe" />
@@ -84,7 +86,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoe" />
       <extension name="coverage">
         <pattern>
@@ -92,20 +94,68 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.tictactoeTest" />
-      <option name="MAIN_CLASS_NAME" value="com.example.tictactoe.ModelTest" />
+      <option name="PACKAGE_NAME" value="com.example.tictactoe" />
+      <option name="MAIN_CLASS_NAME" value="com.example.tictactoe.GameModelTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameModelTest.checkButtonIsDisabledAfterClick" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.tictactoe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.tictactoe" />
+      <option name="MAIN_CLASS_NAME" value="com.example.tictactoe.GameModelTest" />
+      <option name="METHOD_NAME" value="checkButtonIsDisabledAfterClick" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameModelTest.checkIfRoundIsOverWhenPlayerWins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.tictactoe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.tictactoe" />
+      <option name="MAIN_CLASS_NAME" value="com.example.tictactoe.GameModelTest" />
+      <option name="METHOD_NAME" value="checkIfRoundIsOverWhenPlayerWins" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameModelTest.computerCanWinARound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.tictactoe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.tictactoe" />
+      <option name="MAIN_CLASS_NAME" value="com.example.tictactoe.GameModelTest" />
+      <option name="METHOD_NAME" value="computerCanWinARound" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameModelTest" />
         <item itemvalue="Application.GameApplication" />
-        <item itemvalue="JUnit.ModelTest" />
-        <item itemvalue="JUnit.ModelTest" />
-        <item itemvalue="Application.GameApplication" />
-        <item itemvalue="JUnit.ModelTest" />
+        <item itemvalue="JUnit.GameModelTest.checkButtonIsDisabledAfterClick" />
+        <item itemvalue="JUnit.GameModelTest.checkIfRoundIsOverWhenPlayerWins" />
+        <item itemvalue="JUnit.GameModelTest.computerCanWinARound" />
       </list>
     </recent_temporary>
   </component>
@@ -281,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699268262622</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add playAgain button that keeps scores and reset round">
+      <option name="closed" value="true" />
+      <created>1699270159746</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699270159746</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +375,8 @@
     <MESSAGE value="add disableButtonsAfterWin" />
     <MESSAGE value="changed fxml with player and computer labels, add scores for computer and player" />
     <MESSAGE value="refactor names" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor names" />
+    <MESSAGE value="add playAgain button that keeps scores and reset round" />
+    <option name="LAST_COMMIT_MESSAGE" value="add playAgain button that keeps scores and reset round" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
