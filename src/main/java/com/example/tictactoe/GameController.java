@@ -8,11 +8,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import java.util.List;
 
-public class HelloController {
+public class GameController {
 
-    private Model model = new Model();
+    private final GameModel model = new GameModel();
 
     @FXML
     public Label computerScore;
@@ -43,10 +42,6 @@ public class HelloController {
     private Button button7;
     @FXML
     private Button button8;
-
-
-    private int playerTurn = 0;
-    private List<Button> buttons;
 
     public void initialize() {
         bindProperties();

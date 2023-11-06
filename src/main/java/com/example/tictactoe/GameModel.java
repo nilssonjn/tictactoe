@@ -9,14 +9,11 @@ import javafx.scene.text.Text;
 import java.util.List;
 import java.util.Random;
 
-public class Model {
+public class GameModel {
 
-
-    private SimpleIntegerProperty playerScore = new SimpleIntegerProperty();
-    private SimpleIntegerProperty computerScore = new SimpleIntegerProperty();
-    private int playerTurn = 0;
+    private final SimpleIntegerProperty playerScore = new SimpleIntegerProperty();
+    private final SimpleIntegerProperty computerScore = new SimpleIntegerProperty();
     private ObservableList<Button> buttons = FXCollections.observableArrayList();
-
 
     public ObservableList<Button> getButtons() {
         return buttons;
