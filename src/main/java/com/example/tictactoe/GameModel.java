@@ -11,6 +11,10 @@ import java.util.Random;
 
 public class GameModel {
 
+    private boolean playerTurn = true;
+    private boolean computerTurn = false;
+
+
     private final SimpleIntegerProperty playerScore = new SimpleIntegerProperty();
     private final SimpleIntegerProperty computerScore = new SimpleIntegerProperty();
     private ObservableList<Button> buttons = FXCollections.observableArrayList();
@@ -22,6 +26,28 @@ public class GameModel {
     public void setButtons(ObservableList<Button> gameButtons) {
         this.buttons = gameButtons;
     }
+
+    public boolean isPlayerTurn() {
+        return playerTurn;
+    }
+
+    public void setPlayerTurn(boolean playerTurn) {
+        this.playerTurn = playerTurn;
+    }
+
+    public boolean isComputerTurn() {
+        return computerTurn;
+    }
+
+    public void setComputerTurn(boolean computerTurn) {
+        this.computerTurn = computerTurn;
+    }
+
+    private final int [][] winningCombinations = {
+        {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, // horizontal
+        {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, // vertical
+        {0, 4, 8}, {2, 4, 6} // diagonal
+    };
 
     public void resetGameData() {
         for (Button button : this.buttons) {
@@ -112,16 +138,13 @@ public class GameModel {
             showWinner.setText("Computer wins!");
             updateComputerScore();
             disableButtonsAfterWin();
-        } else if (allButtonsClicked()) {
+        } else if (isAllButtonsClicked()) {
             showWinner.setText("Draw!");
         }
     }
 
-    private boolean allButtonsClicked() {
-        for (Button button : this.buttons) {
-            if (button.getText().isEmpty()) return false;
-        }
-        return true;
+    private boolean isAllButtonsClicked(int number) {
+        return false;
     }
 
     public void disableButtonsAfterWin() {

@@ -7,6 +7,7 @@
     <list default="true" id="49c75959-739e-4741-a3f9-ee1c66ddc842" name="Changes" comment="add test computer can win a round,&#10;player can win a round,&#10;there is no winner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameApplication" />
-        <item itemvalue="JUnit.GameModelTest" />
-        <item itemvalue="JUnit.GameModelTest.checkButtonIsDisabledAfterClick" />
-        <item itemvalue="JUnit.GameModelTest.checkIfRoundIsOverWhenPlayerWins" />
         <item itemvalue="JUnit.GameModelTest.computerCanWinARound" />
+        <item itemvalue="JUnit.GameModelTest.checkIfRoundIsOverWhenPlayerWins" />
+        <item itemvalue="JUnit.GameModelTest.checkButtonIsDisabledAfterClick" />
+        <item itemvalue="JUnit.GameModelTest" />
+        <item itemvalue="Application.GameApplication" />
       </list>
     </recent_temporary>
   </component>

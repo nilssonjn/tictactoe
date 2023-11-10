@@ -59,10 +59,8 @@ public class GameController {
 
     public void handleButtonClick(MouseEvent event) {
         Button clickedButton = (Button) event.getSource();
+        buttons.indexOf((Button) event.getSource());
         model.setPlayerSymbol(clickedButton);
-
-        model.randomComputerMove();
-        model.checkWin(button0, button1, button2, button3, button4, button5, button6, button7, button8, showWinner);
     }
 
     public void exitGameWhenClicked() {
