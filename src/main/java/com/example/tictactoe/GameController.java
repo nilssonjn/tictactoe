@@ -9,6 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class GameController {
 
     private final GameModel model = new GameModel();
@@ -39,12 +42,12 @@ public class GameController {
     @FXML
     private Button button8;
 
+    private List<Button> buttons;
+
     public void initialize() {
         bindProperties();
-        ObservableList<Button> gameButtons = FXCollections.observableArrayList(button0, button1, button2, button3, button4, button5, button6, button7, button8);
-        model.setButtons(gameButtons);
-
-        for (Button button : model.getButtons()) { //removes focus from buttons
+        buttons = Arrays.asList(button0, button1, button2, button3, button4, button5, button6, button7, button8);
+        for (Button button : buttons) {
             button.setFocusTraversable(false);
         }
     }
