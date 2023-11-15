@@ -20,31 +20,36 @@
          </children>
       </FlowPane>
       <Button layoutX="191.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#resetGameWhenClicked" prefHeight="38.0" prefWidth="75.0" text="Restart" />
-      <Text fx:id="showWinner" layoutX="227.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe" textAlignment="CENTER" wrappingWidth="134.0">
+      <Text fx:id="showWinner" layoutX="228.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="show the winner or draw" textAlignment="CENTER" wrappingWidth="134.0">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
       <Button layoutX="257.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#exitGameWhenClicked" prefHeight="38.0" prefWidth="75.0" text="Exit Game" />
-      <Label fx:id="computerScore" layoutX="144.0" layoutY="78.0" text="0">
+      <Label fx:id="computerScore" layoutX="145.0" layoutY="101.0" text="0">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Label fx:id="playerScore" layoutX="425.0" layoutY="78.0" text="0">
+      <Label fx:id="playerScore" layoutX="429.0" layoutY="101.0" text="0">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Label layoutX="108.0" layoutY="41.0" prefHeight="23.0" prefWidth="82.0" text="Computer">
+      <Label layoutX="109.0" layoutY="67.0" prefHeight="23.0" prefWidth="82.0" text="Computer">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="405.0" layoutY="41.0" text="Player">
+      <Label layoutX="406.0" layoutY="67.0" text="Player">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <Button layoutX="324.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#playAgainButton" prefHeight="38.0" prefWidth="75.0" text="Play Again" />
+      <Label alignment="CENTER" layoutX="198.0" layoutY="14.0" text="Tic-Tac-Toe">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
 
    </children>
 </AnchorPane>

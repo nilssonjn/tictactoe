@@ -1,8 +1,6 @@
 package com.example.tictactoe;
 
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -50,34 +48,41 @@ public class GameController {
         for (Button button : buttons) {
             button.setFocusTraversable(false);
         }
+        model.setRemainingEmptySlots(buttons.size());
+        model.checkAndUpdateGameStatus(GameModel.GameStatus.PLAYING);
+        model.initializeLists(buttons.size());
+        model.setCurrentPlayer(1);
+
+        updateButtonSymbols();
     }
 
     private void bindProperties() {
         playerScore.textProperty().bind(model.playerScoreProperty().asString());
         computerScore.textProperty().bind(model.computerScoreProperty().asString());
+        showWinner.textProperty().bind(model.announcingWinnerProperty());
+        showWinner.visibleProperty().bind(model.gameOverProperty());
     }
 
     public void handleButtonClick(MouseEvent event) {
-        Button clickedButton = (Button) event.getSource();
-        buttons.indexOf((Button) event.getSource());
-        model.setPlayerSymbol(clickedButton);
+        model.startGameLogic(buttons.indexOf((Button) event.getSource()));
+    }
+
+    private void updateButtonSymbols() {
+        for (int i = 0; i <buttons.size(); i++) {
+            buttons.get(i).textProperty().bind(model.getButtonSymbolsList().get(i));
+            buttons.get(i).disableProperty().bind(model.getButtonDisabledList().get(i));
+        }
     }
 
     public void exitGameWhenClicked() {
         Platform.exit();
     }
 
-    public void resetGame() {
-        model.resetGameData();
-        showWinner.setText("Tic-Tac-Toe");
-    }
-
-    public void resetGameWhenClicked() {
-        resetGame();
-    }
-
     public void playAgainButton() {
-        model.playAgainKeepingScores();
-        showWinner.setText("Tic-Tac-Toe");
+        model.resetGame();
+    }
+
+    public void resetGameWhenClicked () {
+        model.resetScoresAndGameBoard();
     }
 }

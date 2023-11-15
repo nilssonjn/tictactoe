@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49c75959-739e-4741-a3f9-ee1c66ddc842" name="Changes" comment="add test computer can win a round,&#10;player can win a round,&#10;there is no winner">
+    <list default="true" id="49c75959-739e-4741-a3f9-ee1c66ddc842" name="Changes" comment="trying something">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tictactoe/Game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tictactoe/Game-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/tictactoe/GameModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/tictactoe/GameModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,26 +43,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "RebuildForTests",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editing.templates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;RebuildForTests&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -99,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameModelTest.checkButtonIsDisabledAfterClick" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameModelTest.CheckIfButtonIsAvailableWithNoPlayerMark" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoe" />
       <extension name="coverage">
         <pattern>
@@ -109,13 +111,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.tictactoe" />
       <option name="MAIN_CLASS_NAME" value="com.example.tictactoe.GameModelTest" />
-      <option name="METHOD_NAME" value="checkButtonIsDisabledAfterClick" />
+      <option name="METHOD_NAME" value="CheckIfButtonIsAvailableWithNoPlayerMark" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameModelTest.checkIfRoundIsOverWhenPlayerWins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameModelTest.checkIfButtonIsAvailableWithNoPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoe" />
       <extension name="coverage">
         <pattern>
@@ -125,13 +127,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.tictactoe" />
       <option name="MAIN_CLASS_NAME" value="com.example.tictactoe.GameModelTest" />
-      <option name="METHOD_NAME" value="checkIfRoundIsOverWhenPlayerWins" />
+      <option name="METHOD_NAME" value="checkIfButtonIsAvailableWithNoPlayer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameModelTest.computerCanWinARound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameModelTest.dinmamma" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoe" />
       <extension name="coverage">
         <pattern>
@@ -141,7 +143,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.tictactoe" />
       <option name="MAIN_CLASS_NAME" value="com.example.tictactoe.GameModelTest" />
-      <option name="METHOD_NAME" value="computerCanWinARound" />
+      <option name="METHOD_NAME" value="dinmamma" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameModelTest.computerCanWinARound" />
-        <item itemvalue="JUnit.GameModelTest.checkIfRoundIsOverWhenPlayerWins" />
-        <item itemvalue="JUnit.GameModelTest.checkButtonIsDisabledAfterClick" />
-        <item itemvalue="JUnit.GameModelTest" />
         <item itemvalue="Application.GameApplication" />
+        <item itemvalue="JUnit.GameModelTest" />
+        <item itemvalue="JUnit.GameModelTest.CheckIfButtonIsAvailableWithNoPlayerMark" />
+        <item itemvalue="JUnit.GameModelTest.checkIfButtonIsAvailableWithNoPlayer" />
+        <item itemvalue="JUnit.GameModelTest.dinmamma" />
       </list>
     </recent_temporary>
   </component>
@@ -176,6 +178,9 @@
       <workItem from="1698654928701" duration="18431000" />
       <workItem from="1698963647415" duration="6000" />
       <workItem from="1698997953949" duration="12199000" />
+      <workItem from="1699867462389" duration="21600000" />
+      <workItem from="1699900816950" duration="20000" />
+      <workItem from="1700054280730" duration="8504000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
