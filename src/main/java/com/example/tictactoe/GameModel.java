@@ -82,7 +82,7 @@ public class GameModel {
         this.currentPlayer.set(currentPlayer);
     }
 
-    public void initializeLists(int size) {
+    public void initializeButtonLists(int size) {
         for (int i = 0; i < size; i++) {
             buttonSymbolValues.add(new SimpleStringProperty());
             isButtonDisabled.add(new SimpleBooleanProperty());

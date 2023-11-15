@@ -42,7 +42,7 @@ public class GameModelTest {
     @Test
     @DisplayName("Check if button is available with no player symbol")
     void CheckIfButtonIsAvailableWithNoPlayerSymbol() {
-        model.initializeLists(9);
+        model.initializeButtonLists(9);
         int index = model.randomComputerMove();
 
         assertTrue(index >= 0 && index < model.getButtonSymbolsList().size(),

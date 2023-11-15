@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -43,20 +42,25 @@ public class GameController {
     private List<Button> buttons;
 
     public void initialize() {
-        bindProperties();
-        buttons = Arrays.asList(button0, button1, button2, button3, button4, button5, button6, button7, button8);
-        for (Button button : buttons) {
-            button.setFocusTraversable(false);
-        }
-        model.setRemainingEmptySlots(buttons.size());
-        model.checkAndUpdateGameStatus(GameModel.GameStatus.PLAYING);
-        model.initializeLists(buttons.size());
-        model.setCurrentPlayer(1);
-
+        initializePropertyBindings();
+        initializeButtons();
+        initializeGameModel();
         updateButtonSymbols();
     }
 
-    private void bindProperties() {
+    private void initializeButtons() {
+        buttons = Arrays.asList(button0, button1, button2, button3, button4, button5, button6, button7, button8);
+        for (Button button : buttons) button.setFocusTraversable(false);
+    }
+
+    private void initializeGameModel() {
+        model.setRemainingEmptySlots(buttons.size());
+        model.checkAndUpdateGameStatus(GameModel.GameStatus.PLAYING);
+        model.initializeButtonLists(buttons.size());
+        model.setCurrentPlayer(1);
+    }
+
+    private void initializePropertyBindings() {
         playerScore.textProperty().bind(model.playerScoreProperty().asString());
         computerScore.textProperty().bind(model.computerScoreProperty().asString());
         showWinner.textProperty().bind(model.announcingWinnerProperty());
@@ -66,9 +70,11 @@ public class GameController {
     public void handleButtonClick(MouseEvent event) {
         model.startGameLogic(buttons.indexOf((Button) event.getSource()));
     }
-
+    /**
+     * Updates the text and disabled properties of buttons based on the corresponding properties in the model
+     */
     private void updateButtonSymbols() {
-        for (int i = 0; i <buttons.size(); i++) {
+        for (int i = 0; i < buttons.size(); i++) {
             buttons.get(i).textProperty().bind(model.getButtonSymbolsList().get(i));
             buttons.get(i).disableProperty().bind(model.getButtonDisabledList().get(i));
         }
@@ -82,7 +88,7 @@ public class GameController {
         model.resetGame();
     }
 
-    public void resetGameWhenClicked () {
+    public void resetGameWhenClicked() {
         model.resetScoresAndGameBoard();
     }
 }
