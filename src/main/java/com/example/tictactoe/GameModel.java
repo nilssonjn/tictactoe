@@ -191,7 +191,6 @@ public class GameModel {
 
     public void checkAndUpdateGameStatus() {
         setRemainingEmptySlots(getRemainingEmptySlots() - 1);
-
         GameStatus status = determineGameStatus();
         checkAndUpdateGameStatus(status);
     }
