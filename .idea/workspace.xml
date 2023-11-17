@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="49c75959-739e-4741-a3f9-ee1c66ddc842" name="Changes" comment="refactor GameController, clean up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +21,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="RebuildForTests" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="RefactorToMVC" />
@@ -178,7 +203,7 @@
       <workItem from="1699867462389" duration="21600000" />
       <workItem from="1699900816950" duration="20000" />
       <workItem from="1700054280730" duration="10326000" />
-      <workItem from="1700222706838" duration="1846000" />
+      <workItem from="1700222706838" duration="2658000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -380,7 +405,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700224191240</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="refactor GameController, clean up">
+      <option name="closed" value="true" />
+      <created>1700224561058</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1700224561058</updated>
+    </task>
+    <task id="LOCAL-00027" summary="refactor GameController, clean up">
+      <option name="closed" value="true" />
+      <created>1700224596026</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1700224596026</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
