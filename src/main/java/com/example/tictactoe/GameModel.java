@@ -182,7 +182,7 @@ public class GameModel {
         if (!emptyButtons.isEmpty()) {
             return emptyButtons.get(random.nextInt(emptyButtons.size()));
         }
-        return -1;
+        return -1; //there is no available moves
     }
 
     private static boolean isEmpty(String value) {

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49c75959-739e-4741-a3f9-ee1c66ddc842" name="Changes" comment="remade and added methods for testing, 2d array, lists helping with testing checking what index instead of buttons">
+    <list default="true" id="49c75959-739e-4741-a3f9-ee1c66ddc842" name="Changes" comment="refactor GameController, clean up">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-10,_12_27_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023-11-10__12_27__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tictactoe/GameModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/tictactoe/GameModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/tictactoe/GameModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +178,8 @@
       <workItem from="1698997953949" duration="12199000" />
       <workItem from="1699867462389" duration="21600000" />
       <workItem from="1699900816950" duration="20000" />
-      <workItem from="1700054280730" duration="10105000" />
+      <workItem from="1700054280730" duration="10326000" />
+      <workItem from="1700222706838" duration="1393000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -365,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700063240821</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="refactor GameController, clean up">
+      <option name="closed" value="true" />
+      <created>1700068404599</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1700068404599</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +412,8 @@
     <MESSAGE value="add playAgain button that keeps scores and reset round" />
     <MESSAGE value="add test computer can win a round,&#10;player can win a round,&#10;there is no winner" />
     <MESSAGE value="remade and added methods for testing, 2d array, lists helping with testing checking what index instead of buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="remade and added methods for testing, 2d array, lists helping with testing checking what index instead of buttons" />
+    <MESSAGE value="refactor GameController, clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor GameController, clean up" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
