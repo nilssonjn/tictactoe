@@ -214,7 +214,6 @@ public class GameModel {
             addPlayerSymbolAndDisable(randomComputerMove());
             checkAndUpdateGameStatus();
         }
-
         performActionBasedOnGameState(getStateOfTheGame());
     }
 
